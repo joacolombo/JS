@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Calculadora</h2>
+        <div class="form-group">
+            <label for="numero1">Ingrese el numero 1</label>
+            <input id="numero1" class="form-control" type="number" name="">
+        </div>
+        <div class="form-group">
+            <label for="numero2">Ingrese el numero 2</label>
+            <input id="numero2" class="form-control" type="number" name="">
+        </div>
+
+        <button type="button" id="btnSumar" class="btn btn-outline-primary mt-2 btn-block">+</button>
+        <button type="button" id="btnRestar" class="btn btn-outline-primary mt-2 btn-block">-</button>
+        <button type="button" id="btnMultiplicar" class="btn btn-outline-primary mt-2 btn-block">x</button>
+        <button type="button" id="btnDividir" class="btn btn-outline-primary mt-2 btn-block">/</button>
+
+        <div id="containerResultado" class="alert alert-primary mt-2" role="alert">Content</div>        
+    </div>
+
+<script src="/js/index.js"></script>
+</body>
+</html>
