@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Area Triangulo</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="row">
+                <div class="col-12">
+                    <h1>Area del triangulo</h1>
+                </div>
+            </div>
+        </header>
+    
+        <div class="form-group mt-3">
+            <label for="baseTriangulo">Ingrese la base del triangulo:</label>
+            <input type="number" name="" id="baseTriangulo" class="form-control" placeholder="Ingrese la base del triangulo" aria-describedby="helpId">
+        </div>
+    
+        <div class="form-group mt-3">
+            <label for="alturaTriangulo">Ingrese la altura del triangulo:</label>
+            <input type="number" name="" id="alturaTriangulo" class="form-control" placeholder="Ingrese la base del triangulo" aria-describedby="helpId">
+        </div>
+    
+        <div class="row mt-3">
+            <div class="col-12">
+                <button type="button" name="btnCalcular" id="btnCalcular" class="btn btn-success btn-lg btn-block">Calcular Area</button>
+            </div>
+      </div>
+    
+      <div class="alert alert-success mt-3" role="alert">
+          <span id="resultado"></span>
+      </div>
+    </div>
+
+    <script src="/js/index.js"></script>
+</body>
+</html>
