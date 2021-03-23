@@ -9,7 +9,7 @@ function calcularRadio (){
     //Las constantes es necesario que se asignen al momento en el que se declara y su valor es inmutable
     const valorPi = Math.PI;
 
-    let resultado = valorPi * (radio * radio);
+    let resultado = (valorPi * (radio * radio)).toFixed(4);
 
     const containerResultado = document.getElementById("resultado");
 
