@@ -9,22 +9,11 @@ function calcularLados(){
     
     const resultado = document.getElementById("resultado");
 
-    if(inpLong1 < (inpLong2 + inpLong3)){
+    if((inpLong1 < (inpLong2 + inpLong3)) && (inpLong2 < (inpLong1 + inpLong3)) && (inpLong3 < (inpLong1 + inpLong2))){
 
-        resultado.innerHTML = ``;
+        resultado.innerHTML = `Los tres lados forman un triangulo`;
     }else{
-        if(inpLong2 < (inpLong1 + inpLong3)){
 
-        resultado.innerHTML = ``;
-       
-        }else{
-            if(inpLong3 < (inpLong1 + inpLong2)){
-
-            resultado.innerHTML = `aaaaa`;
-           
-            }else{
-                resultado.innerHTML = `Los tres lados no forman un triangulo`;
-            }
-        }
+        resultado.innerHTML = `Los tres lados no forman un triangulo`;
     }
 }
