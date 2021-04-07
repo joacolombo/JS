@@ -10,10 +10,16 @@ function calcularLados(){
     const resultado = document.getElementById("resultado");
 
     if((inpLong1 < (inpLong2 + inpLong3)) && (inpLong2 < (inpLong1 + inpLong3)) && (inpLong3 < (inpLong1 + inpLong2))){
-
-        resultado.innerHTML = `Los tres lados forman un triangulo`;
+        if((inpLong1==inpLong2) && (inpLong2==inpLong3)){
+            resultado.innerHTML = `Los tres lados forman un triangulo equilatero`;
+        }else{
+            if((inpLong1!==inpLong2) && (inpLong1!==inpLong3) && (inpLong2!==inpLong3)){
+                resultado.innerHTML = `Los tres lados forman un triangulo escaleno`;
+            }else{
+                resultado.innerHTML = `Los tres lados forman un triangulo isosceles`;
+            }
+        }
     }else{
-
         resultado.innerHTML = `Los tres lados no forman un triangulo`;
     }
 }
