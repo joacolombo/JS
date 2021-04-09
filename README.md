@@ -19,3 +19,5 @@ Ejercicios Practicos - JavaScript
 16. Más ejercicios prácticos con condicionales.
 
 17. Más ejercicios prácticos con condicionales anidadas.
+
+18. Más ejercicios prácticos con estructuras selectivas.
