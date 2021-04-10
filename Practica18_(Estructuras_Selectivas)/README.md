@@ -52,8 +52,9 @@ Anillo	Más de $ 251.00
 
 18.	El 14 de febrero una persona desea comprarle al ser querido que mas aprecia en ese momento, su dilema radica en regalo puede hacerle, las alternativas que tienen son los siguientes:
 •	Desarrolle una solución para decidir qué regalo puede comprar.
-•	Una compañía de paquetería internacional tiene servicio en algunos países de América del Norte, América Central, América del sur, Europa y Asia.
-19.	El costo por el servicio de paquetería se basa en el peso del paquete y la zona a la cual va dirigido.
+
+
+19. Una compañía de paquetería internacional tiene servicio en algunos países de América del Norte, América Central, América del sur, Europa y Asia. El costo por el servicio de paquetería se basa en el peso del paquete y la zona a la cual va dirigido.
 Zona	Ubicación	Costo/Gramo
 1	América del Norte	$11.00
 2	América Central	$10.00
