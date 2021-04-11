@@ -36,9 +36,8 @@ function calcularCosto(){
 
     resultado = `El costo para enviar su paquete a ${lugar} es de $${total}`;
 
-    let resultContainer = document.getElementById("resultContainer");
+    const resultContainer = document.getElementById("resultContainer");
 
-    resultContainer.innerHTML=`
-    <div class=" alert alert-primary mt-3">${resultado}</div>
-    `;
+    resultContainer.innerHTML=
+    `<div class=" alert alert-primary mt-3">${resultado}</div>`;
 }

@@ -1,50 +1,26 @@
 const btnCalcular = document.getElementById("btnCalcular");
 
-btnCalcular.addEventListener("click", calcularCosto);
+btnCalcular.addEventListener("click", calcularViaje);
 
-function calcularCosto(){
-    let tipoBus = document.getElementById("sltTipoBus").value;
-    let inpPasajeros = Number(document.getElementById("inpPasajeros").value);
-    let  resultado = "";
-    let costoTotal = 0;
-    let costoPasajero = 0;
+function calcularViaje(){
+    let viaje = Number(document.getElementById("inpKm").value);
+    let  destino = "";
+    let total = viaje  * 2;
 
-    if(inpPasajeros == "" || inpPasajeros == 0){
-        alert(`Es necesario ingresar el numero de pasajeros`);
+    if(viaje < 0){
+        alert(`Es necesario ingresar el numero de km que desea realizar para viajar`);
         return;
-    }
-
-    if(inpPasajeros >= 20){
-        if(tipoBus  == "tipoA"){
-            costoTotal = inpPasajeros * 1.5;
-            costoPasajero = 1.5;
-        }else if(tipoBus == "tipoB"){
-            costoTotal = inpPasajeros * 2.0;
-            costoPasajero = 2.0;
-        }else if(tipoBus == "tipoC"){
-            costoTotal = inpPasajeros * 2.5;
-            costoPasajero = 2.5;
-        }else{
-            costoTotal = inpPasajeros * 3.0;
-            costoPasajero = 3.0;
-        }
+    }else if(viaje >= 0 && viaje < 750){
+        destino = "quedarse en casa";
+    }else if(viaje >= 750 && viaje < 800){
+        destino = "visitar Mexico DF";
+    }else if(viaje >= 800 && viaje < 1200){
+        destino = "visitar Puerto Vallarta";
     }else{
-        if(tipoBus  == "tipoA"){
-            costoTotal = (20 * 1.5);
-            costoPasajero = (20 * 1.5) / inpPasajeros;
-        }else if(tipoBus == "tipoB"){
-            costoTotal = inpPasajeros * 2.0;
-            costoPasajero = (20 * 2.0) / inpPasajeros;
-        }else if(tipoBus == "tipoC"){
-            costoTotal = (20 * 2.0);
-            costoPasajero = (20 * 2.5) / inpPasajeros;
-        }else{
-            costoTotal = (20 * 3.0);
-            costoPasajero = (20 * 3.0) / inpPasajeros;
-        }
+        destino = "visitar Cancun";
     }
     
-    resultado = `El costo total del viaje es de: $${costoTotal} siendo el costo por pasajero de: $${costoPasajero}`;
+    resultado = `Usted esta dispuesto a recorrer (ida y vuelta) ${total} km, se recomienda ${destino}`;
 
     let resultContainer = document.getElementById("resultContainer");
 
