@@ -3,12 +3,14 @@ const btnCalcular = document.getElementById("btnCalcular");
 btnCalcular.addEventListener("click", calcularViaje);
 
 function calcularViaje(){
-    let viaje = Number(document.getElementById("inpKm").value);
+    let dinero = Number(document.getElementById("inpDinero").value);
+    
     let  destino = "";
-    let total = viaje  * 2;
+    let costoKm = 10;
+    let viaje = (dinero  / 2) / costoKm;
 
-    if(viaje < 0){
-        alert(`Es necesario ingresar el numero de km que desea realizar para viajar`);
+    if(dinero < 0){
+        alert(`Es necesario ingresar el dinero que desea gastar en el viaje`);
         return;
     }else if(viaje >= 0 && viaje < 750){
         destino = "quedarse en casa";
@@ -20,7 +22,7 @@ function calcularViaje(){
         destino = "visitar Cancun";
     }
     
-    resultado = `Usted esta dispuesto a recorrer (ida y vuelta) ${total} km, se recomienda ${destino}`;
+    resultado = `Usted esta dispuesto a gastar en su viaje $${dinero}, se recomienda ${destino}`;
 
     let resultContainer = document.getElementById("resultContainer");
 
