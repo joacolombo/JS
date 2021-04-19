@@ -4,57 +4,51 @@ btnInitApp.addEventListener("click", calcularProduccion);
 
 function calcularProduccion(){ 
     let continuar = true;
-    let total = 0;
     let empresa = 1;
+    let prodMax = 0;
+    let produccionTxt = "";
+    let prodMaxTxt = "";
+    let prodJulioTxt = "";
+    let n = prompt(`Ingrese la cantidad de empresas`);
     
-    for(let i=1; i<=12; i++){
-      while(continuar == true){
-      let produccion = Number(prompt(`Ingrese la produccion del mes ${i} de la empresa ${empresa}`));
+    while(continuar == true && empresa<=n){
+      let total =0;
+
+      for(let i=1; i<=12; i++){
+        let produccion = prompt(`Ingrese la produccion del mes ${i} de la empresa ${empresa}`);
+        
         if(isNaN(produccion)==true){
           alert("Ingrese un numero positivo");
+          i = i-1;
         }else if(produccion == null){
-          continuar = false;
+          continuar == false;
+          return;
         }else{
-          total = total + produccion;
+          total = total + Number(produccion);
+
+          if(i==7 && produccion>=3000000){
+          prodJulioTxt +=`<br>La empresa <b>${empresa}</b> produjo mas de $3,000,000 en el mes de julio`;
+          }
         }
-      }  
+      }
+
+      if(total==prodMax){
+        prodMax = total;
+        prodMaxTxt +=`<br>La empresa que mas produjo fue la empresa <b>${empresa}</b> por un total de <b>$ ${prodMax}</b>`; 
+      }else if(total>prodMax){
+        prodMax = total;
+        prodMaxTxt =`<br>La empresa que mas produjo fue la empresa <b>${empresa}</b> por un total de <b>$ ${prodMax}</b>`; 
+      }
+
+      produccionTxt += `<br>La produccion de la empresa <b>${empresa}</b> fue de <b>$${total}</b>`;
       empresa++;
     }
-    
       
 
     let resultContainer = document.getElementById("resultContainer");
 
     resultContainer.innerHTML = `
-    <table class="table">
-    <thead>
-      <tr>
-        <th>Candidato</th>
-        <th>Votos</th>
-        <th>Porcentaje</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td scope="row">"1"</td>
-        <td>${tv1}</td>
-        <td>${pv1}%</td>
-      </tr>
-      <tr>
-        <td scope="row">"2"</td>
-        <td>${tv2}</td>
-        <td>${pv2}%</td>
-      </tr>
-      <tr>
-        <td scope="row">"3"</td>
-        <td>${tv3}</td>
-        <td>${pv3}%</td>
-      </tr>
-      <tr>
-        <td scope="row">"4"</td>
-        <td>${tv4}</td>
-        <td>${pv4}%</td>
-      </tr>
-    </tbody>
-  </table>`;
+    <br>${produccionTxt}
+    <br>${prodMaxTxt}
+    <br>${prodJulioTxt}`;
 }
