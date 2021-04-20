@@ -1,8 +1,8 @@
 const btnInitApp = document.getElementById("btnInitApp");
 
-btnInitApp.addEventListener("click", calcularSerie);
+btnInitApp.addEventListener("click", calcularNroPerfecto);
 
-function calcularSerie(){
+function calcularNroPerfecto(){
     let numero = Number(prompt(`Ingrese un numero entero positivo`));
     let suma = 0;
     let resultado = "";

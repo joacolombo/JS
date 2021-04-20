@@ -1,16 +1,17 @@
 const btnInitApp = document.getElementById("btnInitApp");
 
-btnInitApp.addEventListener("click", calcularProduccion);
+btnInitApp.addEventListener("click", calcularVentas);
 
-function calcularProduccion(){ 
+function calcularVentas(){ 
     let continuar = true;
     let empresa = 1;
     let prodMax = 0;
     let produccionTxt = "";
     let prodMaxTxt = "";
     let prodJulioTxt = "";
+    let n = prompt(`Ingrese la cantidad de empresas`);
     
-    while(continuar == true){
+    while(continuar == true && empresa<=n){
       let total =0;
 
       for(let i=1; i<=12; i++){
@@ -20,8 +21,8 @@ function calcularProduccion(){
           alert("Ingrese un numero positivo");
           i = i-1;
         }else if(produccion == null){
-          continuar = false;
-          break;
+          continuar == false;
+          return;
         }else{
           total = total + Number(produccion);
 
