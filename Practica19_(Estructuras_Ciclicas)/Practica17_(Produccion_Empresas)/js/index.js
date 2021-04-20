@@ -6,6 +6,7 @@ function calcularProduccion(){
     let continuar = true;
     let empresa = 1;
     let prodMax = 0;
+
     let produccionTxt = "";
     let prodMaxTxt = "";
     let prodJulioTxt = "";
@@ -31,15 +32,18 @@ function calcularProduccion(){
         }
       }
 
-      if(total==prodMax){
+      if(total>0 && total==prodMax){
         prodMax = total;
         prodMaxTxt +=`<br>La empresa que mas produjo fue la empresa <b>${empresa}</b> por un total de <b>$ ${prodMax}</b>`; 
-      }else if(total>prodMax){
+      }else if(total>0 && total>prodMax){
         prodMax = total;
         prodMaxTxt =`<br>La empresa que mas produjo fue la empresa <b>${empresa}</b> por un total de <b>$ ${prodMax}</b>`; 
       }
 
-      produccionTxt += `<br>La produccion de la empresa <b>${empresa}</b> fue de <b>$${total}</b>`;
+      if(total>0){
+        produccionTxt += `<br>La produccion de la empresa <b>${empresa}</b> fue de <b>$${total}</b>`;
+      }
+      
       empresa++;
     }
       
