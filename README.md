@@ -23,3 +23,5 @@ Ejercicios Practicos - JavaScript
 18. Práctica de ejercicios con estructuras selectivas.
 
 19. Práctica de ejercicios con estructuras cíclicas.
+
+20. Práctica de ejercicios complementarios con estructuras cíclicas.
