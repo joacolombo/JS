@@ -1,8 +1,8 @@
 const btnInitApp = document.getElementById("btnInitApp");
 
-btnInitApp.addEventListener("click", evaluarNumero);
+btnInitApp.addEventListener("click", calcularVotos);
 
-function evaluarNumero(){ 
+function calcularVotos(){ 
     let continuar = true;
     let total = 0;
 
