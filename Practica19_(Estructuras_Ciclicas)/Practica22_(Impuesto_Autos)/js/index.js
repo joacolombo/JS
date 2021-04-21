@@ -22,42 +22,37 @@ function calcularImpuesto() {
     let valor = prompt(`Ingrese el valor del vehiculo ${i}`);
     if (isNaN(valor) == true || valor < 0) {
       alert("Ingrese un numero positivo");
-      return;
     } else if (valor == null) {
-      continuar = false;
-      break;
-    }
-
-    let clave = prompt(`Ingrese la clave del vehiculo (1 a 3)`);
-    if (isNaN(clave) == true || clave % 1 != 0 || clave < 1 || clave > 3) {
-      alert("Ingrese un numero entero entre 1 y 3");
-      return;
-    } else if (clave == null) {
-      continuar = false;
       break;
     }else{
-      valor = Number(valor);
-
-      if (clave == 1) {
-        impVehiculo = Number((valor * 0.10).toFixed(2));
-        impC1 = Number((impC1 + impVehiculo).toFixed(2));
+      let clave = prompt(`Ingrese la clave del vehiculo (1 a 3)`);
+      if (isNaN(clave) == true || clave % 1 != 0 || clave < 1 || clave > 3) {
+        alert("Ingrese un numero entero entre 1 y 3");
+      } else if (clave == null) {
+        break;
+      }else{
+        valor = Number(valor);
   
-        vehiculoTxt += `<br>El vehiculo <b>${i}</b> de valor <b>$${valor}</b> y clave <b>${clave}</b> paga un impuesto de $<b>${impVehiculo}</b>`;
-  
-      } else if (clave == 2) {
-        impVehiculo = Number((valor * 0.07).toFixed(2));
-        impC2 = Number((impC2 + impVehiculo).toFixed(2));
-        
-        vehiculoTxt += `<br>El vehiculo <b>${i}</b> de valor <b>$${valor}</b> y clave <b>${clave}</b> paga un impuesto de $<b>${impVehiculo}</b>`;
-  
-      } else if (clave == 3) {
-        impVehiculo = Number((valor * 0.05).toFixed(2));
-        impC3 = Number((impC3 + impVehiculo).toFixed(2));
-        
-        vehiculoTxt += `<br>El vehiculo <b>${i}</b> de valor <b>$${valor}</b> y clave <b>${clave}</b> paga un impuesto de $<b>${impVehiculo}</b>`;
-  
+        if (clave == 1) {
+          impVehiculo = Number((valor * 0.10).toFixed(2));
+          impC1 = Number((impC1 + impVehiculo).toFixed(2));
+    
+          vehiculoTxt += `<br>El vehiculo <b>${i}</b> de valor <b>$${valor}</b> y clave <b>${clave}</b> paga un impuesto de $<b>${impVehiculo}</b>`;
+    
+        } else if (clave == 2) {
+          impVehiculo = Number((valor * 0.07).toFixed(2));
+          impC2 = Number((impC2 + impVehiculo).toFixed(2));
+          
+          vehiculoTxt += `<br>El vehiculo <b>${i}</b> de valor <b>$${valor}</b> y clave <b>${clave}</b> paga un impuesto de $<b>${impVehiculo}</b>`;
+    
+        } else if (clave == 3) {
+          impVehiculo = Number((valor * 0.05).toFixed(2));
+          impC3 = Number((impC3 + impVehiculo).toFixed(2));
+          
+          vehiculoTxt += `<br>El vehiculo <b>${i}</b> de valor <b>$${valor}</b> y clave <b>${clave}</b> paga un impuesto de $<b>${impVehiculo}</b>`;
+        }
+        i++;
       }
-      i++;
     }
   }
 
