@@ -21,3 +21,5 @@ Ejercicios Practicos - JavaScript
 17. Práctica de ejercicios con condicionales anidadas.
 
 18. Práctica de ejercicios con estructuras selectivas.
+
+19. Práctica de ejercicios con estructuras cíclicas.
