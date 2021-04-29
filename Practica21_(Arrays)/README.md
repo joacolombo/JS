@@ -1,29 +1,39 @@
 Ejercicios Practicos - JavaScript
 
-08. Se desea calcular la distancia recorrida (m) por un móvil que tiene velocidad constante (m/s) durante un tiempo T (Sg), considerar que es un movimiento rectilíneo uniforme.
+06. Llenar dos arreglos (A, B) de manera aleatoria:
+  a. Realizar C = A+B
+  b. Realizar C = B-A
+  c. Realizar C = B*A
+El usuario podrá elegir que opción de C desea ver en pantalla, también podrá ver el vector A y B para comprobar los resultados, el rango de los números aleatorios para los Vectores será de [-100 a 100], la longitud de los Vectores es la misma, por lo tanto, solo se solicitará una vez.
 
-09. Se necesita un programa que solicite el numero de respuestas correctas, incorrectas y en blanco, correspondientes a postulantes, y muestre su puntaje final considerado, que por cada respuesta correcta tendrá 4 puntos, respuestas incorrectas tendrá -1 y respuestas en blanco tendrá 0.
+07. Crear una función que reciba un arreglo con palabras, crear un nuevo arreglo que contenga solo las palabras que empiezan con una vocal.
 
-10. Elabore un algoritmo que lea los 3 lados de un triangulo cualquiera y calcule su área, considerar: Si A, B y C son los lados y S el semiperimetro.
+08. Crear una función que reciba un arreglo tamaño n con números aleatorios y devuelva un nuevo arreglo con solo los números pares. deberá presentar ambos arreglos en pantalla.
 
-11. Se tiene los puntos A y B en el cuadrante positivo del plano cartesiano, elabore el algoritmo que permite obtener la distancia entre A y B.
+09. Rellene un array con los números primos comprendidos entre 1 y 1000 y los muestre en pantalla en orden descendente.
 
-12. La conagua requiere determinar el pago que debe realizar una persona por el total de metros cúbicos que consume de agua al llenar una alberca. Realice un algoritmo y represéntelo mediante un diagrama de flujo y el pseudocódigo que permita determinar ese pago.
+10. Llenar con una palabra un arreglo y regresar un arreglo que muestre el primero, pero invertido.
 
-13. Una modista, para realizar sus prendas de vestir, encarga las telas al extranjero. Para cada pedido, tiene que proporcionar las medidas de la tela en pulgadas, pero ella generalmente las tiene en metros. Realice un algoritmo para ayudar a resolver el problema, determinando cuántas pulgadas debe pedir con base en los metros que requiere. 
+11. Que lea una cadena y la encripte sumando 3 al código ASCII de cada carácter. Mostrar por pantalla.
 
-14. Se requiere determinar la hipotenusa de un triángulo rectángulo. Recuerde que por Pitágoras se tiene que: C2 = A2 + B2 .
+12. Dado un arreglo de tamaño n, desarrolle una solución que regrese:
+  a. Media, mediana y moda.
+  b. Varianza.
+  c. Desviación estándar.
 
-15. Una empresa desea determinar el monto de un cheque que debe proporcionar a uno de sus empleados que tendrá que ir por equis número de días a la ciudad de Monterrey; los gastos que cubre la empresa son: hotel, comida y 100.00 pesos diarios para otros gastos. El monto debe estar desglosado para cada concepto.
+13. Dado un array de números de 5 posiciones con los siguientes valores {0,1,2,3,4,5,6,7,8,9}, guardar los valores de este array en otro array distinto, pero con los valores invertidos, es decir, que el segundo array deberá tener los valores {9,8,7,6,5,4,3,2,1,0}.
 
-16. Práctica de ejercicios con condicionales.
+14. Suponga que tiene un arreglo de 30 posiciones llenado de forma aleatoria con números enteros entre 100 y 300, desarrolle una solución que recorra dicho arreglo y separe en un segundo arreglo los números impares, al final imprima ambos arreglos
 
-17. Práctica de ejercicios con condicionales anidadas.
+15. La búsqueda binaria es un algoritmo eficiente para encontrar un elemento en una lista ordenada de elementos. Funciona al dividir repetidamente a la mitad la porción de lalista que podría contener al elemento, hasta reducir las ubicaciones posibles a solo una. Dado un arreglo de 25 posiciones llenado con números de manera aleatoria, desarrolle una solución que le permita al usuario encontrar un numero dentro de dicho arreglo mediante el método de búsqueda binaria.
 
-18. Práctica de ejercicios con estructuras selectivas.
+16. Desarrolle una solución que lea 10 números por teclado, 5 para un array y 5 para otro array distinto. Mostrar los 10 números en pantalla mediante un tercer array.
 
-19. Práctica de ejercicios con estructuras cíclicas.
+17. Dados dos arreglos numéricos del mismo tamaño (A, B), generar un tercer arreglo que combine los numero de A y B ordenados de manera descendente.
 
-20. Práctica de ejercicios complementarios con estructuras cíclicas.
+18. El algoritmo de ordenamiento por inserción es un algoritmo de fácil aplicación que permite el ordenamiento de una lista.
+Su funcionamiento consiste en el recorrido por la lista seleccionando en cada iteración un valor como clave y compararlo con el resto insertándolo en el lugar correspondiente.
+Desarrolle una solución que permita al usuario capturar en un array de longitud n números entre 0 y 100 y mediante ordenamiento por inserción regrese el array ordenado.
 
-21. Práctica de ejercicios con arreglos.
+19. Suponga que tiene un arreglo de longitud = 30 con números enteros generados de manera aleatoria.
+Desarrolle una solución que regrese en otro arreglo todos los múltiplos de 7 del arreglo anterior.
