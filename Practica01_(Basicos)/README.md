@@ -15,15 +15,3 @@ Ejercicios Practicos - JavaScript
 14. Se requiere determinar la hipotenusa de un triángulo rectángulo. Recuerde que por Pitágoras se tiene que: C2 = A2 + B2 .
 
 15. Una empresa desea determinar el monto de un cheque que debe proporcionar a uno de sus empleados que tendrá que ir por equis número de días a la ciudad de Monterrey; los gastos que cubre la empresa son: hotel, comida y 100.00 pesos diarios para otros gastos. El monto debe estar desglosado para cada concepto.
-
-16. Práctica de ejercicios con condicionales.
-
-17. Práctica de ejercicios con condicionales anidadas.
-
-18. Práctica de ejercicios con estructuras selectivas.
-
-19. Práctica de ejercicios con estructuras cíclicas.
-
-20. Práctica de ejercicios complementarios con estructuras cíclicas.
-
-21. Práctica de ejercicios con arreglos.
