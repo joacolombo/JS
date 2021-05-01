@@ -32,11 +32,12 @@ function almacenarArray(){
 
 function validarArray(){
     console.log("VALIDAR");
-    console.log(array[2].charAt());
+    
     let index2 = 0;
 
     for(let index=0; index<array.length; index++){
-        let letra = array[index].charAt();
+        //let letra = array[index].charAt();
+        let letra = array[index].slice(0,1);
 
         if(letra == "a"){
             arrayVocales[index2] = array[index];
