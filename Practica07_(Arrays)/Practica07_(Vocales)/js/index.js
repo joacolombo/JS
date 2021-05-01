@@ -14,12 +14,12 @@ function almacenarArray(){
 
     while (continuar == true){
         let palabra = prompt("Ingrese una palabra");
-
-        //Falta validar que me ingrese una sola palabra
         
-        if(isNaN(palabra) == false && palabra != null && palabra != ""){
+        if(isNaN(palabra) == false && palabra != null){
             alert("Ingrese una palabra");
-        }else if(palabra == null || palabra == ""){
+        }else if(/\s/.test(palabra)){
+            alert("Ingrese una sola palabra");
+        }else if(palabra == null){
             continuar = false;
         }else{
             array[index] = palabra;
