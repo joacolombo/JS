@@ -17,11 +17,7 @@ function almacenarArray(){
         }else if(palabra == null){
             return;
         }else{
-            let indexReves = palabra.length-1;
-            for(let index = 0; index<palabra.length; index++){
-                palabraReves[indexReves] = palabra[index];
-                indexReves--;
-            }
+            
         }
         mostrarArray();
 }
