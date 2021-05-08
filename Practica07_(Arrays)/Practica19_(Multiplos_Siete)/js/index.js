@@ -21,7 +21,11 @@ function almacenarValores(){
             arrayB.push(arrayA[i]);
         }
     }
+    
+    mostrarValores();
+}
 
+function mostrarValores(){
     resultContainer.innerHTML = `
     <b>Array Original:</b>
     <br>
