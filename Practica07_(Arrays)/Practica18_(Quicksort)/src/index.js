@@ -1,4 +1,3 @@
-
 function main() {
     let numberList = [0, 2, 4, 1, 9, 4, 5, 7, 3, 4];
     let longitud = numberList.length;
