@@ -1,47 +1,46 @@
-function main() {
-    let numberList = [0, 2, 4, 1, 9, 4, 5, 7, 3, 4];
-    let longitud = numberList.length;
-    quickSort(numberList, o, longitud - 1);
+//Recursividad: una funcion se manda a llamar una determinada cantidad de veces
+let index = 0;
+
+function main () {
+    let numberList = [14, 4, 10, 9, 1 ,2];
+
+   let listSort = quickSort (numberList);
+   console.log(listSort);
 }
 
-/**
- * 
- * @param {*} arr -> array a ser acomodado
- * @param {*} low -> index inicial
- * @param {*} high -> index final
- */
+function quickSort (arr){
 
-function quickSort(arr, low, high) {
-    if(low < high){
-        partition(arr, low, high);
-    }
-}
+    //Validacion del tamaño de los sub-arreglos
+    if (arr.length == 0) return [];
 
-/**
- * Esta funcion toma el ultimo elemento como pivote, coloca el pivote en la posicion correcta de ordenacion
- * A la izquierda los chicos, a la derecha los grandes
- * @param {*} arr 
- * @param {*} low 
- * @param {*} high 
- */
+    //Pivote: el elemento que se encuentra a la mitad del arreglo
+    let mediumIndex = Math.floor(arr.length / 2);
+    let pivote = arr[mediumIndex];
+    
+    //Left: numeros menores al pivote
+    //Right: numeros mayores al pivote
+    let leftArr = [];
+    let rightArr = [];
 
-function partition(arr, low, high) {
-    let pivot = arr[high];
-    let index = low - 1;
-
-    for(let j = low; j <= high - 1; j++) {
-        if(arr[j] < pivot){
-            index++;
-            let tmp=arr[index];
-            arr[index] = arr[j];
-            arr[j] = tmp;
+    //Recorro el arreglo para validar numeros menores y mayores que el pivote
+    //Cuando el for evalue la posicion en el cual se encuentra el pivote no tengo que hacer nada
+    for (let i=0; i<arr.length; i++) {
+        if (i != mediumIndex) {
+            if (arr[i] < pivote) {
+                leftArr.push(arr[i]);
+            }else{
+                rightArr.push(arr[i]);
+            }
         }
     }
 
-    index++;
-    let tmp = arr[index];
-    arr[index] = arr[high];
-    arr[high] = tmp;
+    leftArr = quickSort(leftArr);
+    rightArr = quickSort(rightArr);
+
+    console.log(leftArr);
+    console.log(rightArr);
+
+    return leftArr.concat(pivote).concat(rightArr);
 }
 
 main();
